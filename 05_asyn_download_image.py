@@ -2,15 +2,6 @@ import aiohttp
 import asyncio
 
 
-echo "# Python_asyn" >> README.md
-git init
-git add README.md
-git commit -m "first commit"
-git branch -M main
-git remote add origin git@github.com:double55/Python_asyn.git
-git push -u origin main
-
-
 async def fetch(session, url):
     print("发送请求：", url)
     async with session.get(url, verify_ssl=False) as response:
